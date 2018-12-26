@@ -34,7 +34,7 @@ gulp.task('sass', () => {
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('docs/images'))
 });
 
 gulp.task('watch', ['browserSync', 'sass'], () => {
@@ -47,15 +47,15 @@ gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
 });
 
 gulp.task("moveframeworks", function(){
-  gulp.src("node_modules/bootstrap/dist/js/bootstrap.min.js")
-  gulp.src("node_modules/jquery/dist/jquery.min.js")
-  gulp.src("node_modules/popper.js/dist/popper.min.js")
+  gulp.src("node_modules/bootstrap/docs/js/bootstrap.min.js")
+  gulp.src("node_modules/jquery/docs/jquery.min.js")
+  gulp.src("node_modules/popper.js/docs/popper.min.js")
   .pipe (gulp.dest("app/js"))
-  gulp.src("node_modules/bootstrap/dist/css/bootstrap.min.css")
+  gulp.src("node_modules/bootstrap/docs/css/bootstrap.min.css")
   .pipe (gulp.dest("app/css"))
 })
 
@@ -70,13 +70,13 @@ gulp.task('scripts', () => {
   .on('error', function (err) {
      gutil.log(gutil.colors.red('[Error]'), err.toString());
    })
-  .pipe(gulp.dest('dist/js'));
+  .pipe(gulp.dest('docs/js'));
 })
 
 gulp.task('minifyhtml', () => {
   return gulp.src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: false,  conservativeCollapse: true}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('prefixer', () =>
@@ -88,8 +88,8 @@ gulp.task('prefixer', () =>
         .pipe(gulp.dest('app/css'))
 );
 
-gulp.task('clean:dist', () => {
-  return del.sync('dist');
+gulp.task('clean:docs', () => {
+  return del.sync('docs');
 })
 
 gulp.task('default', function (callback) {
@@ -99,6 +99,6 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', ['sass', 'images'] ,'prefixer', 'useref', 'minifyhtml',
+  runSequence('clean:docs', ['sass', 'images'] ,'prefixer', 'useref', 'minifyhtml',
     callback)
 })
