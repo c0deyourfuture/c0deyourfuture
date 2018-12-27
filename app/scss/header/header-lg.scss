@@ -1,0 +1,20 @@
+@media (min-width: $lg-br){
+    .header{
+        height: 5rem;
+        &__logo{
+            height: 5rem;
+        }
+        &__cont-list{
+            display: block;
+            position: relative;
+            justify-content: flex-end;
+        }
+        &__list{
+            margin: 0;
+            &-item{
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+}

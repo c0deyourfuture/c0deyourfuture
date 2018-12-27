@@ -1,0 +1,48 @@
+@media (min-width: $xs-br) {
+    .disp-none{
+        display: none;
+    }
+    .hamburger {
+        z-index: 2;
+        height: 0rem;
+
+        &__bar {
+            cursor: pointer;
+            right: 2rem;
+            width: 2rem;
+            position: absolute;
+            height: 4.6px;
+            border-radius: 100px;
+            background: black;
+            &:first-of-type {
+                margin-top: -.50rem;
+            }
+            &:last-of-type {
+                margin-top: .50rem;
+
+            }
+
+        }
+    }
+
+    .header {
+        &__logo {
+            width: 8rem;
+        }
+
+        &__cont-list {
+            position: fixed;
+        }
+
+        &__list {
+            margin: 0;
+            margin-top: 10rem;
+
+            &-item {
+                padding: 0.5rem;
+                border-bottom: 1px solid #bbbbbb;
+            }
+        }
+
+    }
+}

@@ -16,15 +16,23 @@
 
 </head>
 
-<body>
+<body class="bg-light">
     <div class="container">
-        <header class="row">
-            <div class="col-4"><img class="header__logo" src="images/logo.png" alt="logo"></div>
-            <div class="col-12 col-lg-7  bg-light">
-                <ul class="  row header__list list-unstyled">
-                    <li class=" col-12 col-lg header__list-item text-center">Co to programowanie?</li>
-                    <li class=" col-12 col-lg header__list-item text-center">Zalety programowania?</li>
-                    <li class=" col-12 col-lg header__list-item text-center">Jak zacząć?</li>
+        <header class="header row  bg-light ">
+            <div class="col"><a href="#"><img class="header__logo" src="images/logo.png" alt="logo"></a></div>
+            <div class=" row hamburger align-self-center  col-2">
+                <div class="hamburger__bar  "></div>
+                <div class="hamburger__bar  "></div>
+                <div class="hamburger__bar  "></div>
+            </div>
+            <div id="header-list" class="disp-none header__cont-list col-12 col-lg-8  bg-light align-self-center ">
+                <ul class="header__list row  list-unstyled justify-content-end">
+                    <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="text-black-50"
+                            href="#">Co to programowanie?</a></li>
+                    <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="text-black-50"
+                            href="#">Zalety programowania?</a></li>
+                    <li class="header__list-item col-12 col-lg-3 align-self-center  text-center"><a class="text-black-50"
+                            href="#">Jak zacząć?</a></li>
                 </ul>
             </div>
         </header>
