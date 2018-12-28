@@ -1,4 +1,7 @@
-@media (min-width: $lg-br){
+@media (min-width: $lg-bp){
+    .hamburger{
+        display: none;
+    }
     .header{
         height: 5rem;
         &__logo{
