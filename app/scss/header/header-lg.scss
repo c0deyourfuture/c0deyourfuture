@@ -2,6 +2,9 @@
     .hamburger{
         display: none;
     }
+    .display-none{
+        display: block;
+    }
     .header{
         height: 5rem;
         &__logo{
@@ -11,6 +14,7 @@
             display: block;
             position: relative;
             justify-content: flex-end;
+            animation-name: none;
         }
         &__list{
             margin: 0;

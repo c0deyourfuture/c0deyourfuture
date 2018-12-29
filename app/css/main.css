@@ -1,6 +1,6 @@
 /* breakpoints */
 @media (min-width: 0) {
-  .disp-none {
+  .display-none {
     display: none; }
   .hamburger {
     z-index: 3;
@@ -10,29 +10,54 @@
       cursor: pointer;
       right: 2rem;
       width: 2rem;
-      position: absolute;
+      position: fixed;
       height: 4.6px;
       border-radius: 100px;
       background: black; }
       .hamburger__bar:first-of-type {
-        margin-top: -.50rem; }
+        margin-top: -.5rem; }
       .hamburger__bar:last-of-type {
-        margin-top: .50rem; }
+        margin-top: .5rem; }
   .header__logo {
     width: 8rem; }
   .header__cont-list {
     position: fixed;
     z-index: 2; }
   .header__list {
-    margin: 0;
-    margin-top: 10rem; }
+    margin: 10rem 0 0 0; }
     .header__list-item {
       padding: 0.5rem;
       border-bottom: 1px solid #bbbbbb; } }
 
+.hamburger-animation-close {
+  animation-name: hamburger-animation-close;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+
+.hamburger-animation-open {
+  animation-name: hamburger-animation-open;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; }
+
+@keyframes hamburger-animation-open {
+  from {
+    transform: translateX(150%); }
+  to {
+    transform: translateX(50%); } }
+
+@keyframes hamburger-animation-close {
+  from {
+    transform: translateX(50%); }
+  to {
+    transform: translateX(150%); } }
+
 @media (min-width: 992px) {
   .hamburger {
     display: none; }
+  .display-none {
+    display: block; }
   .header {
     height: 5rem; }
     .header__logo {
@@ -40,7 +65,8 @@
     .header__cont-list {
       display: block;
       position: relative;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+      animation-name: none; }
     .header__list {
       margin: 0; }
       .header__list-item {

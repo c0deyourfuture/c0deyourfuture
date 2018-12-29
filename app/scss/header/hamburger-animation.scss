@@ -1,0 +1,35 @@
+.hamburger{
+    &-animation-close{
+        animation-name: hamburger-animation-close;
+        animation-duration: .7s;
+
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    &-animation-open{
+        animation-name: hamburger-animation-open;
+        animation-duration: .7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes hamburger-animation-open{
+    from{
+        transform: translateX(150%);
+    }
+    to{
+
+        transform: translateX(50%);
+    }
+}
+
+@keyframes hamburger-animation-close{
+    from{
+        transform: translateX(50%);
+    }
+    to{
+
+        transform: translateX(150%);
+    }
+}
