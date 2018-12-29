@@ -76,3 +76,21 @@
 @media (min-width: 768px) {
   .slider__heading {
     font-size: 2.5rem; } }
+
+@media (min-width: 992px) {
+  .slider__img {
+    height: 40rem; } }
+
+@media (min-width: 768px) {
+  .card-img {
+    height: 20vw; }
+  .card {
+    margin: 0 0.2rem; }
+    .card:first-child {
+      margin-left: 1rem; }
+    .card:last-child {
+      margin-right: 1rem; } }
+
+@media (min-width: 992px) {
+  .card-img {
+    height: 17vw; } }
