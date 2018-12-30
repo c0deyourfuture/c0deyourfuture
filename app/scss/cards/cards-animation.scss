@@ -1,0 +1,14 @@
+.card-animation{
+    animation-name: card-animation;
+    animation-duration: 2s;
+}
+@keyframes card-animation{
+    from{
+        transform: translateY(5%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
