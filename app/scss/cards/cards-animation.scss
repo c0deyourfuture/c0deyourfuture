@@ -1,10 +1,12 @@
 .card-animation{
     animation-name: card-animation;
-    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+    visibility: visible;
 }
 @keyframes card-animation{
     from{
-        transform: translateY(5%);
+        transform: translateY(6%);
         opacity: 0;
     }
     to{

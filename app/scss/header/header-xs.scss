@@ -31,12 +31,18 @@
         }
 
         &__cont-list {
+            
+            border-left: 1px solid black;
             position: fixed;
             z-index: 2;
+            height: 100vh;
+            padding-top:3rem;
+            margin-top: 45.5vh;
         }
 
         &__list {
-            margin: 10rem 0 0 0;
+
+            align-content: flex-start;
             &-item {
                 padding: 0.5rem;
                 border-bottom: 1px solid #bbbbbb;

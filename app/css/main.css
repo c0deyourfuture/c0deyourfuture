@@ -21,10 +21,15 @@
   .header__logo {
     width: 8rem; }
   .header__cont-list {
+    border-left: 1px solid black;
     position: fixed;
-    z-index: 2; }
+    z-index: 2;
+    height: 100vh;
+    padding-top: 3rem;
+    margin-top: 45.5vh; }
   .header__list {
-    margin: 10rem 0 0 0; }
+    -ms-flex-line-pack: start;
+    align-content: flex-start; }
     .header__list-item {
       padding: 0.5rem;
       border-bottom: 1px solid #bbbbbb; } }
@@ -49,37 +54,95 @@
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
-@-webkit-keyframes hamburger-animation-open {
-  from {
-    -webkit-transform: translateX(155%);
-    transform: translateX(155%); }
-  to {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); } }
+@media (min-width: 0) {
+  @-webkit-keyframes hamburger-animation-open {
+    from {
+      -webkit-transform: translateX(155%);
+      transform: translateX(155%); }
+    to {
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%); } }
+  @keyframes hamburger-animation-open {
+    from {
+      -webkit-transform: translateX(155%);
+      transform: translateX(155%); }
+    to {
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%); } }
+  @-webkit-keyframes hamburger-animation-close {
+    from {
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%); }
+    to {
+      -webkit-transform: translateX(155%);
+      transform: translateX(155%); } }
+  @keyframes hamburger-animation-close {
+    from {
+      -webkit-transform: translateX(50%);
+      transform: translateX(50%); }
+    to {
+      -webkit-transform: translateX(155%);
+      transform: translateX(155%); } } }
 
-@keyframes hamburger-animation-open {
-  from {
-    -webkit-transform: translateX(155%);
-    transform: translateX(155%); }
-  to {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); } }
+@media (min-width: 576px) {
+  @-webkit-keyframes hamburger-animation-open {
+    from {
+      -webkit-transform: translateX(200%);
+      transform: translateX(200%); }
+    to {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); } }
+  @keyframes hamburger-animation-open {
+    from {
+      -webkit-transform: translateX(200%);
+      transform: translateX(200%); }
+    to {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); } }
+  @-webkit-keyframes hamburger-animation-close {
+    from {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); }
+    to {
+      -webkit-transform: translateX(200%);
+      transform: translateX(200%); } }
+  @keyframes hamburger-animation-close {
+    from {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); }
+    to {
+      -webkit-transform: translateX(200%);
+      transform: translateX(200%); } } }
 
-@-webkit-keyframes hamburger-animation-close {
-  from {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); }
-  to {
-    -webkit-transform: translateX(155%);
-    transform: translateX(155%); } }
-
-@keyframes hamburger-animation-close {
-  from {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); }
-  to {
-    -webkit-transform: translateX(155%);
-    transform: translateX(155%); } }
+@media (min-width: 768px) {
+  @-webkit-keyframes hamburger-animation-open {
+    from {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); }
+    to {
+      -webkit-transform: translateX(400%);
+      transform: translateX(400%); } }
+  @keyframes hamburger-animation-open {
+    from {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); }
+    to {
+      -webkit-transform: translateX(400%);
+      transform: translateX(400%); } }
+  @-webkit-keyframes hamburger-animation-close {
+    from {
+      -webkit-transform: translateX(400%);
+      transform: translateX(400%); }
+    to {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); } }
+  @keyframes hamburger-animation-close {
+    from {
+      -webkit-transform: translateX(400%);
+      transform: translateX(400%); }
+    to {
+      -webkit-transform: translateX(300%);
+      transform: translateX(300%); } } }
 
 @media (min-width: 992px) {
   .hamburger {
@@ -92,6 +155,10 @@
       height: 5rem; }
     .header__cont-list {
       display: block;
+      border: none;
+      height: auto;
+      padding: 0;
+      margin: 0;
       position: relative;
       -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -140,16 +207,22 @@
   .slider__img {
     height: 40rem; } }
 
+.card {
+  visibility: hidden; }
+
 .card-animation {
   -webkit-animation-name: card-animation;
   animation-name: card-animation;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s; }
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  visibility: visible; }
 
 @-webkit-keyframes card-animation {
   from {
-    -webkit-transform: translateY(5%);
-    transform: translateY(5%);
+    -webkit-transform: translateY(6%);
+    transform: translateY(6%);
     opacity: 0; }
   to {
     -webkit-transform: translateY(0%);
@@ -158,8 +231,8 @@
 
 @keyframes card-animation {
   from {
-    -webkit-transform: translateY(5%);
-    transform: translateY(5%);
+    -webkit-transform: translateY(6%);
+    transform: translateY(6%);
     opacity: 0; }
   to {
     -webkit-transform: translateY(0%);

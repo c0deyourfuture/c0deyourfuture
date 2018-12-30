@@ -12,6 +12,10 @@
         }
         &__cont-list{
             display: block;
+            border:none;
+            height: auto;
+            padding: 0;
+            margin: 0;
             position: relative;
             justify-content: flex-end;
             animation-name: none;
