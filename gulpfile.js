@@ -13,6 +13,7 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 var autoprefixer = require('gulp-autoprefixer');
 var htmlmin = require('gulp-htmlmin');
+var uncss = require('gulp-uncss');
 
 gulp.task('browserSync', () => {
   browserSync.init({
@@ -43,6 +44,20 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
+
+
+gulp.task("uncss", function () {
+  return gulp.src([
+      'app/css/bootstrap.min.css'
+    ])
+    .pipe(uncss({
+      html: [
+        'app/index.html'
+      ]
+    }))
+    .pipe(gulp.dest('docs/css'));
+})
+
 gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
@@ -50,13 +65,13 @@ gulp.task('useref', () => {
     .pipe(gulp.dest('docs'))
 });
 
-gulp.task("moveframeworks", function(){
+gulp.task("moveframeworks", function () {
   gulp.src("node_modules/bootstrap/docs/js/bootstrap.min.js")
   gulp.src("node_modules/jquery/docs/jquery.min.js")
   gulp.src("node_modules/popper.js/docs/popper.min.js")
-  .pipe (gulp.dest("app/js"))
+    .pipe(gulp.dest("app/js"))
   gulp.src("node_modules/bootstrap/docs/css/bootstrap.min.css")
-  .pipe (gulp.dest("app/css"))
+    .pipe(gulp.dest("app/css"))
 })
 
 gulp.task('scripts', () => {
@@ -67,25 +82,28 @@ gulp.task('scripts', () => {
         keepClassNames: true
       }
     }))
-  .on('error', function (err) {
-     gutil.log(gutil.colors.red('[Error]'), err.toString());
-   })
-  .pipe(gulp.dest('docs/js'));
+    .on('error', function (err) {
+      gutil.log(gutil.colors.red('[Error]'), err.toString());
+    })
+    .pipe(gulp.dest('docs/js'));
 })
 
 gulp.task('minifyhtml', () => {
   return gulp.src('src/*.html')
-    .pipe(htmlmin({ collapseWhitespace: false,  conservativeCollapse: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: false,
+      conservativeCollapse: true
+    }))
     .pipe(gulp.dest('docs'));
 });
 
 gulp.task('prefixer', () =>
-    gulp.src('app/css/*.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('app/css'))
+  gulp.src('app/css/*.css')
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(gulp.dest('app/css'))
 );
 
 gulp.task('clean:docs', () => {
@@ -99,6 +117,6 @@ gulp.task('default', function (callback) {
 })
 
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', ['sass', 'images'] ,'prefixer', 'useref', 'minifyhtml',
+  runSequence('clean:docs', ['sass', 'images'], 'prefixer', 'useref', 'uncss', 'minifyhtml',
     callback)
 })

@@ -1,15 +1,7 @@
-@media (min-width: $md-bp){
-    .card-img{
+@media (min-width: $md-bp) {
+    .card-img {
         height: 20vw;
     }
-    .card{
-        margin:0 0.2rem;
-        &:first-child
-        {
-            margin-left: 1rem;
-        }
-        &:last-child{
-            margin-right: 1rem;
-        }
-    }
+
+    
 }

@@ -18,13 +18,16 @@ let lazyLoading = new Promise(function (resolve, reject) {
 })
 let lazyLoadingAnim = (el) => {
     if (el.offsetTop <= window.innerHeight + window.scrollY) {
+        el.classList.remove("invisible");
         el.classList.add("card-animation");
         
     }
 }
-let lazyLoadingImg = (el) => {
-    if (el.offsetTop <= window.innerHeight + window.scrollY) {
-    el.src = el.dataset.src;
+let lazyLoadingImg = (imgEl, contEl) => {
+    if (contEl.offsetTop <= window.innerHeight + window.scrollY) {
+    imgEl.src = imgEl.dataset.src;
+   
+    
     
     }
 }
@@ -32,14 +35,14 @@ lazyLoading.then(function () {
 
     for (let i = 0; i < cardsEl.length; i++) {
             lazyLoadingAnim(cardsEl[i]);
-            lazyLoadingImg(cardsImgEl[i]);
+            lazyLoadingImg(cardsImgEl[i],cardsEl[i]);
     }
 })
 lazyLoading.then(function (resolve, reject) {
     for (let i = 0; i < cardsEl.length; i++) {
         window.addEventListener("scroll", function () {
             lazyLoadingAnim(cardsEl[i]);
-            lazyLoadingImg(cardsImgEl[i]);
+            lazyLoadingImg(cardsImgEl[i],cardsEl[i]);
 
         })
 
