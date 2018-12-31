@@ -1,0 +1,23 @@
+@media (min-width: $xs-bp){
+    .card{
+        visibility: hidden;
+        &__background{
+
+            background-image: url(../../images/section2-background.svg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        &__circle{
+            width: 10rem;
+            height: 10rem;
+            align-self: center;
+        }
+        &__icon{
+            text-align: center;
+            width: 6rem;
+            height: 100%;
+            
+        }
+    }
+}
