@@ -1,0 +1,20 @@
+@mixin background($red, $green, $blue, $path) {
+
+    background:
+        linear-gradient(rgba($red, $green, $blue, .90),
+        rgba($red, $green, $blue, .90)),
+        url($path), no-repeat, center;
+    background-size: 100%;
+    animation-duration: 2s;
+    transition: background 2s;
+
+    &:hover {
+
+        background:
+            linear-gradient(rgba($red, $green, $blue, .3),
+            rgba($red, $green, $blue, .3)),
+            url($path), no-repeat, center;
+        background-size: 100%;
+    }
+
+}

@@ -1,14 +1,15 @@
 .hamburger {
     &-animation-close {
         animation-name: hamburger-animation-close;
-        animation-duration: .7s;
+        animation-duration: .5s;
+
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
 
     &-animation-open {
         animation-name: hamburger-animation-open;
-        animation-duration: .7s;
+        animation-duration: .5s;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
@@ -21,7 +22,7 @@
         }
 
         to {
-
+            display: none;
             transform: translateX(50%);
         }
     }
@@ -37,6 +38,7 @@
         }
     }
 }
+
 @media(min-width:$sm-bp) {
     @keyframes hamburger-animation-open {
         from {
@@ -60,6 +62,7 @@
         }
     }
 }
+
 @media(min-width:$md-bp) {
     @keyframes hamburger-animation-open {
         from {

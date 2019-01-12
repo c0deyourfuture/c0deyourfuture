@@ -1,7 +1,6 @@
 @media (min-width: $xs-bp){
     .card{
         &__background{
-
             background-image: url(../images/section2-background.svg);
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -18,5 +17,11 @@
             height: 100%;
             
         }
+        &__heading{
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    &-text{
+        font-family: 'Roboto', sans-serif;
     }
 }
