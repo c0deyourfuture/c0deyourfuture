@@ -1,11 +1,11 @@
 .card-animation{
     animation-name: card-animation;
-    animation-timing-function: ease-out;
-    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.2s;
 }
 @keyframes card-animation{
     from{
-        transform: translateY(6%);
+        transform: translateY(10%);
         opacity: 0;
     }
     to{

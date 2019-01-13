@@ -1,23 +1,15 @@
-.third-section {
+.last-sec {
     &__article {
         overflow: hidden;
     }
 
     &__cont {
-        position: relative;
-        z-index: 5;
         transform: scale(1.1);
-        height: 20rem;
+        height: 18rem;
     }
 
     &__image {
         height: 100%;
-        background:
-            linear-gradient(rgba(55, 0, 0, .65),
-            rgba(55, 0, 0, .65)),
-            url(../images/section1.1.jpeg);
-        background-repeat: no-repeat;
-        background-position: center;
 
         &--light-blue {
             @include background(111, 195, 223, "../images/section3/section3.1.jpg");
@@ -28,19 +20,19 @@
         }
 
         &--red {
-            @include background(236,141,129, "../images/section3/section3.2.png")
+            @include background(236,141,129, "../images/section3/section3.3.png")
         }
 
         &--yellow {
-            @include background(231,183,136, "../images/section3/section3.2.png")
+            @include background(231,183,136, "../images/section3/section3.4.png")
         }
 
         &--blue {
-            @include background(142,169,232, "../images/section3/section3.2.png")
+            @include background(142,169,232, "../images/section3/section3.5.png")
         }
 
         &--green {
-            @include background(135,197,164, "../images/section3/section3.2.png")
+            @include background(135,197,164, "../images/section3/section3.6.png")
         }
     }
 

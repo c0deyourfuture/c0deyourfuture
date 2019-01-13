@@ -1,18 +1,30 @@
 let hamburgerBarEl = document.getElementsByClassName("hamburger__bar");
 for (let i = 0; i < hamburgerBarEl.length; i++) {
     hamburgerBarEl[i].addEventListener("click", function () {
-        document.getElementById("header-list").classList.toggle("hamburger-animation-close");
-        document.getElementById("header-list").classList.remove("d-none");
-        document.getElementById("header-list").classList.toggle("hamburger-animation-open");
+        
+        //document.getElementById("header-list").classList.toggle("hamburger-animation-close");
+        //document.getElementById("header-list").classList.toggle("hamburger-animation-open");
     })
 }
 
+let hambureger ={
+    el: document.getElementsByClassName("hamburger__bar"),
+    nav: document.getElementById("header-list"),
+    doToggle(){
+        this.nav.classList.toggle("expanded")
+    }
+}
 
 let cardsEl = document.getElementsByClassName("card");
 let cardsImgEl = document.getElementsByClassName("card-img");
 
-let thirdSectionEl = document.getElementsByClassName("third-section__article");
-let thirdSectionImgEl = document.getElementsByClassName("third-section__image")
+
+let colors = [
+    'light-blue', 'violet', 'red', 'yellow', 'blue', 'green'
+];
+
+let thirdSectionEl = document.getElementsByClassName("last-sec__article");
+let thirdSectionImgEl = document.getElementsByClassName("last-sec__image")
 let lazyLoadingCard = new Promise(function (resolve, reject) {
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -32,13 +44,22 @@ let lazyLoadingCardImg = (imgEl, contEl) => {
     }
 }
 
+let lazyLoadingLastSecImg = (i) => {
+    if (document.getElementsByClassName("last-sec__article")[i].offsetTop <= window.innerHeight + window.scrollY) {
+        document.getElementsByClassName("last-sec__image")[i].classList.add(`last-sec__image--${colors[i]}`)
+    }
+}
 
-for (let i = 0; i < document.getElementsByClassName("third-section__article").length; i++) {
-    console.log(document.getElementsByClassName("third-section__article")[i]);
- 
-    window.addEventListener("scroll", () => {
-        lazyLoadingAnim(document.getElementsByClassName('third-section__article')[i])
+for (let i = 0; i < document.getElementsByClassName("last-sec__article").length; i++) {
     
+    window.addEventListener("scroll", () => {
+        lazyLoadingLastSecImg(i);
+        if(i%2==0){
+            lazyLoadingAnim(document.getElementsByClassName('last-sec__article')[i], "last-sec-right-anim");
+        }
+        else{
+            lazyLoadingAnim(document.getElementsByClassName('last-sec__article')[i], "last-sec-left-anim");
+        }
     })
 }
 window.addEventListener("scroll", () => {

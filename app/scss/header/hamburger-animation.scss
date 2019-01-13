@@ -2,7 +2,6 @@
     &-animation-close {
         animation-name: hamburger-animation-close;
         animation-duration: .5s;
-
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
     }
@@ -14,7 +13,6 @@
         animation-fill-mode: forwards;
     }
 }
-
 @media(min-width:$xs-bp) {
     @keyframes hamburger-animation-open {
         from {

@@ -3,18 +3,21 @@
     background:
         linear-gradient(rgba($red, $green, $blue, .90),
         rgba($red, $green, $blue, .90)),
-        url($path), no-repeat, center;
+        url($path);
     background-size: 100%;
-    animation-duration: 2s;
-    transition: background 2s;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
 
     &:hover {
 
         background:
             linear-gradient(rgba($red, $green, $blue, .3),
             rgba($red, $green, $blue, .3)),
-            url($path), no-repeat, center;
+            url($path);
         background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
 }
