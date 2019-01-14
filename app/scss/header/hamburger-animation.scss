@@ -98,14 +98,17 @@
         &-container-unexpanded {
             left: 0;
         }
+
         &-container-expanded {
             left: -66%;
         }
+
         &-list-unexpanded {
             right: -68%;
             overflow: auto;
             transition: 1s all;
         }
+
         &-list-expanded {
             overflow: auto;
             right: 0;
@@ -113,17 +116,19 @@
         }
     }
 }
-@mixin hamburger-anim($size, $left, $right){
-    @media(min-width: $size){
-        .hamburger{
-            &-container-expanded{
+
+@mixin hamburger-anim($size, $left, $right) {
+    @media(min-width: $size) {
+        .hamburger {
+            &-container-expanded {
                 left: $left;
             }
-            &-list-unexpanded{
+            &-list-unexpanded {
                 right: $right;
             }
         }
     }
 }
-@include hamburger-anim($sm-bp, -33%,-35%);
-@include hamburger-anim($md-bp, -25%,-25%);
+
+@include hamburger-anim($sm-bp, -33%, -35%);
+@include hamburger-anim($md-bp, -25%, -25%);

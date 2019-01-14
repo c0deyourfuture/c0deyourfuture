@@ -12,14 +12,15 @@ let hamburger = {
     nav: document.getElementById("header-list"),
     cont: document.getElementsByClassName("container")[0],
     doToggle() {
-        
+
         this.cont.classList.toggle("hamburger-container-expanded");
         this.cont.classList.toggle("hamburger-container-unexpanded");
         this.nav.classList.toggle("hamburger-list-expanded");
         this.nav.classList.toggle("hamburger-list-unexpanded");
     }
 }
-for (let i = 0; i<hamburger.el.length; i++){
-hamburger.el[i].addEventListener("click", () => {
-    hamburger.doToggle()
-})}
+for (let i = 0; i < hamburger.el.length; i++) {
+    hamburger.el[i].addEventListener("click", () => {
+        hamburger.doToggle()
+    })
+}
