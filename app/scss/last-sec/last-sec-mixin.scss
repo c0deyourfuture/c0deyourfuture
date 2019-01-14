@@ -1,23 +1,12 @@
-@mixin background($red, $green, $blue, $path) {
-
-    background:
-        linear-gradient(rgba($red, $green, $blue, .90),
-        rgba($red, $green, $blue, .90)),
-        url($path);
+@mixin background($red, $green, $blue) {
+    background-color: rgba($red, $green, $blue, .90);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 1s ease-in-out;
-
+    transition: all 1s;
+    transition-timing-function: ease-out;
     &:hover {
-
-        background:
-            linear-gradient(rgba($red, $green, $blue, .3),
-            rgba($red, $green, $blue, .3)),
-            url($path);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-color: rgba($red, $green, $blue, .1);
     }
 
 }

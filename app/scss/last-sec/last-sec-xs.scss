@@ -1,38 +1,45 @@
 .last-sec {
     &__article {
         overflow: hidden;
-    }
-
-    &__cont {
-        transform: scale(1.1);
         height: 18rem;
+        position: relative;
+
     }
 
     &__image {
+        text-align: center;
+        display: block;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+    }
+
+    &__cont {
         height: 100%;
 
         &--light-blue {
-            @include background(111, 195, 223, "../images/section3/section3.1.jpg");
+            @include background(111, 195, 223);
         }
 
         &--violet {
-            @include background(141, 130, 196, "../images/section3/section3.2.png")
+            @include background(141, 130, 196)
         }
 
         &--red {
-            @include background(236,141,129, "../images/section3/section3.3.png")
+            @include background(236, 141, 129)
         }
 
         &--yellow {
-            @include background(231,183,136, "../images/section3/section3.4.png")
+            @include background(231, 183, 136)
         }
 
         &--blue {
-            @include background(142,169,232, "../images/section3/section3.5.png")
+            @include background(142, 169, 232)
         }
 
         &--green {
-            @include background(135,197,164, "../images/section3/section3.6.png")
+            @include background(135, 197, 164)
         }
     }
 
@@ -40,9 +47,10 @@
 
         width: 80%;
         height: 2rem;
-        position: relative;
-        top: 4.8rem;
-        right: -3rem;
+        position: absolute;
+        top: 4rem;
+        left: 3rem;
+
     }
 
     &__caption {

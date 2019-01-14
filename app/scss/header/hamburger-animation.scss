@@ -1,86 +1,129 @@
-.hamburger {
-    &-animation-close {
-        animation-name: hamburger-animation-close;
-        animation-duration: .5s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-    }
+// .hamburger {
+//     &-animation-close {
+//         animation-name: hamburger-animation-close;
+//         animation-duration: .5s;
+//         animation-timing-function: ease-in-out;
+//         animation-fill-mode: forwards;
+//     }
 
-    &-animation-open {
-        animation-name: hamburger-animation-open;
-        animation-duration: .5s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
+//     &-animation-open {
+//         animation-name: hamburger-animation-open;
+//         animation-duration: .5s;
+//         animation-timing-function: ease-in-out;
+//         animation-fill-mode: forwards;
+//     }
+// }
+
+// @media(min-width:$xs-bp) {
+//     @keyframes hamburger-animation-open {
+//         from {
+//             transform: translateX(155%);
+//         }
+
+//         to {
+//             display: none;
+//             transform: translateX(50%);
+//         }
+//     }
+
+//     @keyframes hamburger-animation-close {
+//         from {
+//             transform: translateX(50%);
+//         }
+
+//         to {
+
+//             transform: translateX(155%);
+//         }
+//     }
+// }
+
+// @media(min-width:$sm-bp) {
+//     @keyframes hamburger-animation-open {
+//         from {
+//             transform: translateX(200%);
+//         }
+
+//         to {
+
+//             transform: translateX(300%);
+//         }
+//     }
+
+//     @keyframes hamburger-animation-close {
+//         from {
+//             transform: translateX(300%);
+//         }
+
+//         to {
+
+//             transform: translateX(200%);
+//         }
+//     }
+// }
+
+// @media(min-width:$md-bp) {
+//     @keyframes hamburger-animation-open {
+//         from {
+//             transform: translateX(300%);
+//         }
+
+//         to {
+
+//             transform: translateX(400%);
+//         }
+//     }
+
+//     @keyframes hamburger-animation-close {
+//         from {
+//             transform: translateX(400%);
+//         }
+
+//         to {
+
+//             transform: translateX(300%);
+//         }
+//     }
+// }
+.container {
+    transition: 1s all;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+
+@media(min-width: $xs-bp) {
+    .hamburger {
+        &-container-unexpanded {
+            left: 0;
+        }
+        &-container-expanded {
+            left: -66%;
+        }
+        &-list-unexpanded {
+            right: -68%;
+            overflow: auto;
+            transition: 1s all;
+        }
+        &-list-expanded {
+            overflow: auto;
+            right: 0;
+            transition: 1s all;
+        }
     }
 }
-@media(min-width:$xs-bp) {
-    @keyframes hamburger-animation-open {
-        from {
-            transform: translateX(155%);
-        }
-
-        to {
-            display: none;
-            transform: translateX(50%);
-        }
-    }
-
-    @keyframes hamburger-animation-close {
-        from {
-            transform: translateX(50%);
-        }
-
-        to {
-
-            transform: translateX(155%);
+@mixin hamburger-anim($size, $left, $right){
+    @media(min-width: $size){
+        .hamburger{
+            &-container-expanded{
+                left: $left;
+            }
+            &-list-unexpanded{
+                right: $right;
+            }
         }
     }
 }
-
-@media(min-width:$sm-bp) {
-    @keyframes hamburger-animation-open {
-        from {
-            transform: translateX(200%);
-        }
-
-        to {
-
-            transform: translateX(300%);
-        }
-    }
-
-    @keyframes hamburger-animation-close {
-        from {
-            transform: translateX(300%);
-        }
-
-        to {
-
-            transform: translateX(200%);
-        }
-    }
-}
-
-@media(min-width:$md-bp) {
-    @keyframes hamburger-animation-open {
-        from {
-            transform: translateX(300%);
-        }
-
-        to {
-
-            transform: translateX(400%);
-        }
-    }
-
-    @keyframes hamburger-animation-close {
-        from {
-            transform: translateX(400%);
-        }
-
-        to {
-
-            transform: translateX(300%);
-        }
-    }
-}
+@include hamburger-anim($sm-bp, -33%,-35%);
+@include hamburger-anim($md-bp, -25%,-25%);

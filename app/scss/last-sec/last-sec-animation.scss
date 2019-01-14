@@ -6,10 +6,12 @@
 }
 @keyframes last-sec-left-anim{
     from{
-        transform: translateX(100%);
+        position: relative;
+        left: 100%;
     }
     to{
-        transform: translateX(0%);
+        position: relative;
+        left: 0;
     }
 }
 .last-sec-right-anim{
@@ -19,9 +21,11 @@
 }
 @keyframes last-sec-right-anim{
     from{
-        transform: translateX(-100%);
+        position: relative;
+        right: 100%;
     }
     to{
-        transform: translateX(0%);
+        position: relative;
+        right: 0;
     }
 }
