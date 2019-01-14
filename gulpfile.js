@@ -34,7 +34,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm)')
     .pipe(gulp.dest('docs/images'))
 });
 
