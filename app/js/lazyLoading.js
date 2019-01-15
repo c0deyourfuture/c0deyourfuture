@@ -12,7 +12,7 @@ let lazyLoadingAnim = (el, animName) => {
     }
 }
 let lazyLoadingImg = (imgEl, contEl) => {
-    if (contEl.offsetTop <= window.innerHeight + window.scrollY) {
+    if (contEl.offsetTop + 50  <= window.innerHeight + window.scrollY) {
         imgEl.src = imgEl.dataset.src;
     }
 }
@@ -50,7 +50,6 @@ window.addEventListener("scroll", () => {
         lazyLoadingImg(lastSecImgEl[i], lastSecEl[i])
         if (i % 2 == 0) {
             lazyLoadingAnim(lastSecEl[i], "last-sec-right-anim");
-
         } else {
             lazyLoadingAnim(lastSecEl[i], "last-sec-left-anim");
         }

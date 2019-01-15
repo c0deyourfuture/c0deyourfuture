@@ -4,8 +4,11 @@
     display: none; }
   .hamburger {
     z-index: 100;
-    height: 0rem;
-    width: 1px; }
+    padding-left: 0;
+    padding-top: 2rem;
+    height: 2rem;
+    box-sizing: content-box;
+    width: 0px; }
     .hamburger__bar {
       cursor: pointer;
       right: 2rem;
@@ -18,26 +21,36 @@
         margin-top: -.5rem; }
       .hamburger__bar:last-of-type {
         margin-top: .5rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__cont-list {
+  .header {
+    background: #f8f9fa;
     position: fixed;
-    border-left: 1px solid black;
-    position: fixed;
-    z-index: 90;
-    height: 100vh;
-    padding-top: 3rem;
-    margin-top: 45vh; }
-  .header__list {
-    font-family: 'Roboto', sans-serif;
-    -ms-flex-line-pack: start;
-    align-content: flex-start; }
-    .header__list-item {
-      padding: 0.5rem;
-      border-bottom: 1px solid #bbbbbb; } }
+    height: 3.5rem;
+    z-index: 20;
+    width: 100%;
+    transition: 1s all; }
+    .header__scrolled {
+      background: rgba(247, 248, 248, 0.8);
+      transition: 1s all; }
+      .header__scrolled .header__cont-list {
+        background: transparent !important;
+        transition: 1s all; }
+    .header__logo {
+      height: 3.5rem; }
+    .header__cont-list {
+      position: fixed;
+      border-left: 1px solid black;
+      z-index: 90;
+      transform: translateY(45%);
+      height: 100vh;
+      padding-top: 3rem; }
+    .header__list {
+      font-family: 'Roboto', sans-serif;
+      align-content: flex-start; }
+      .header__list-item {
+        padding: 0.5rem;
+        border-bottom: 1px solid #bbbbbb; } }
 
 .container {
-  -webkit-transition: 1s all;
   transition: 1s all;
   position: relative;
   z-index: 10;
@@ -51,12 +64,10 @@
   .hamburger-list-unexpanded {
     right: -68%;
     overflow: auto;
-    -webkit-transition: 1s all;
     transition: 1s all; }
   .hamburger-list-expanded {
     overflow: auto;
     right: 0;
-    -webkit-transition: 1s all;
     transition: 1s all; } }
 
 @media (min-width: 576px) {
@@ -82,15 +93,12 @@
     height: 4rem;
     z-index: 20;
     width: 100%;
-    -webkit-transition: 1s all;
     transition: 1s all; }
     .header__scrolled {
       background: rgba(247, 248, 248, 0.8);
-      -webkit-transition: 1s all;
       transition: 1s all; }
       .header__scrolled .header__cont-list {
         background: transparent !important;
-        -webkit-transition: 1s all;
         transition: 1s all; }
     .header__logo {
       height: 4rem; }
@@ -103,11 +111,9 @@
       height: auto;
       padding: 0;
       margin: 0;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
       justify-content: flex-end;
-      -webkit-animation-name: none;
-      animation-name: none; }
+      animation-name: none;
+      transform: translateY(0); }
     .header__list {
       margin: 0; }
       .header__list-item {
@@ -124,20 +130,19 @@
       filter: grayscale(70%) blur(2.5px);
       -webkit-filter: grayscale(70%) blur(2.5px);
       height: 50%;
-      -webkit-transform: scale(1.1);
       transform: scale(1.1); }
     .slider__heading {
       padding: 0 15vw; } }
 
 .slider {
   height: 50%;
+  margin-top: 3rem;
   overflow: hidden; }
   .slider__img {
     width: 100vw;
     filter: grayscale(70%) blur(2.5px);
     -webkit-filter: grayscale(70%) blur(2.5px);
     height: 50%;
-    -webkit-transform: scale(1.1);
     transform: scale(1.1); }
   .slider__video {
     width: 100%;
@@ -151,8 +156,10 @@
     font-size: 2.5rem; } }
 
 @media (min-width: 992px) {
-  .slider__img {
-    height: 40rem; } }
+  .slider {
+    margin-top: 0rem; }
+    .slider__img {
+      height: 40rem; } }
 
 @media (min-width: 0) {
   .card__background {
@@ -163,7 +170,6 @@
   .card__circle {
     width: 10rem;
     height: 10rem;
-    -ms-flex-item-align: center;
     align-self: center; }
   .card__icon {
     text-align: center;
@@ -175,30 +181,15 @@
     font-family: 'Roboto', sans-serif; } }
 
 .card-animation {
-  -webkit-animation-name: card-animation;
   animation-name: card-animation;
-  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 1.2s;
   animation-duration: 1.2s; }
-
-@-webkit-keyframes card-animation {
-  from {
-    -webkit-transform: translateY(10%);
-    transform: translateY(10%);
-    opacity: 0; }
-  to {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    opacity: 1; } }
 
 @keyframes card-animation {
   from {
-    -webkit-transform: translateY(10%);
     transform: translateY(10%);
     opacity: 0; }
   to {
-    -webkit-transform: translateY(0%);
     transform: translateY(0%);
     opacity: 1; } }
 
@@ -236,9 +227,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 1s;
     transition: all 1s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
     .last-sec__cont--light-blue:hover {
       background-color: rgba(111, 195, 223, 0.1); }
@@ -247,9 +236,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 1s;
     transition: all 1s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
     .last-sec__cont--violet:hover {
       background-color: rgba(141, 130, 196, 0.1); }
@@ -258,9 +245,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 1s;
     transition: all 1s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
     .last-sec__cont--red:hover {
       background-color: rgba(236, 141, 129, 0.1); }
@@ -269,9 +254,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 1s;
     transition: all 1s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
     .last-sec__cont--yellow:hover {
       background-color: rgba(231, 183, 136, 0.1); }
@@ -280,9 +263,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 1s;
     transition: all 1s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
     .last-sec__cont--blue:hover {
       background-color: rgba(142, 169, 232, 0.1); }
@@ -291,9 +272,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 1s;
     transition: all 1s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out; }
     .last-sec__cont--green:hover {
       background-color: rgba(135, 197, 164, 0.1); }
@@ -320,20 +299,8 @@
     width: auto; } }
 
 .last-sec-left-anim {
-  -webkit-animation-name: last-sec-left-anim;
   animation-name: last-sec-left-anim;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out; }
-
-@-webkit-keyframes last-sec-left-anim {
-  from {
-    position: relative;
-    left: 100%; }
-  to {
-    position: relative;
-    left: 0; } }
+  animation-duration: 1s; }
 
 @keyframes last-sec-left-anim {
   from {
@@ -344,20 +311,9 @@
     left: 0; } }
 
 .last-sec-right-anim {
-  -webkit-animation-name: last-sec-right-anim;
   animation-name: last-sec-right-anim;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out; }
-
-@-webkit-keyframes last-sec-right-anim {
-  from {
-    position: relative;
-    right: 100%; }
-  to {
-    position: relative;
-    right: 0; } }
 
 @keyframes last-sec-right-anim {
   from {

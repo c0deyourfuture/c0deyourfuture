@@ -1,5 +1,5 @@
 window.addEventListener("scroll", () =>{
-    if(window.scrollY != 0){
+    if(window.scrollY >= 50){
         document.getElementsByClassName("header")[0].classList.add("header__scrolled")
     }
     else{

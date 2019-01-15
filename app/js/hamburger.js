@@ -8,7 +8,7 @@ for (let i = 0; i < hamburgerBarEl.length; i++) {
 }
 
 let hamburger = {
-    el: document.getElementsByClassName("hamburger__bar"),
+    el: document.getElementsByClassName("hamburger"),
     nav: document.getElementById("header-list"),
     cont: document.getElementsByClassName("container")[0],
     doToggle() {
@@ -19,8 +19,6 @@ let hamburger = {
         this.nav.classList.toggle("hamburger-list-unexpanded");
     }
 }
-for (let i = 0; i < hamburger.el.length; i++) {
-    hamburger.el[i].addEventListener("click", () => {
+    hamburger.el[0].addEventListener("click", () => {
         hamburger.doToggle()
     })
-}
