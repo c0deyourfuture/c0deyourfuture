@@ -16,9 +16,10 @@
             right: 2rem;
             width: 2rem;
             position: fixed;
-            height: 4.6px;
+            height: 3.6px;
             border-radius: 100px;
-            background: black;
+            background: white;
+            transition: background 1s;
 
             &:first-of-type {
                 margin-top: -.5rem;
@@ -33,9 +34,9 @@
     }
 
     .header {
-        background: #f8f9fa;
+        background: transparent;
         position: fixed;
-        height: 3.5rem;
+        height: 3rem;
         z-index: 20;
         width: 100%;
         transition: 1s all;
@@ -43,7 +44,13 @@
         &__scrolled {
             background: rgba(247, 248, 248, 0.8);
             transition: 1s all;
-
+            .header__heading{
+                transition: color 1s;
+                color: #343a40 !important;
+            }
+            .hamburger__bar{
+                background: black;
+            }
             .header__cont-list {
                 background: transparent !important;
                 transition: 1s all;
@@ -51,9 +58,11 @@
         }
 
         &__logo {
-            height: 3.5rem;
+            height: 3rem;
         }
-
+        &__link{
+            color: #343a40 !important;
+        }
         &__cont-list {
             position: fixed;
             border-left: 1px solid black;

@@ -8,7 +8,7 @@
     }
 
     .header {
-        background: #f8f9fa;
+        background: transparent;
         position: fixed;
         height: 4rem;
         z-index: 20;
@@ -22,11 +22,17 @@
                 background: transparent !important;
                 transition: 1s all;
             }
+            a{
+                color: #343a40 !important;
+                transition: color 1s;
+            }
         }
         &__logo {
             height: 4rem;
         }
-
+        &__link{
+            color: #f8f9fa !important;
+        }
         &__cont-list {
             background: transparent;
             display: block;

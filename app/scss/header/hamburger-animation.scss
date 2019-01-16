@@ -95,12 +95,43 @@
 
 @media(min-width: $xs-bp) {
     .hamburger {
+        &__bar{
+            transition: 1s all;
+        }
+        &-barAnimation {
+            .hamburger__bar {
+                transition: 1s all;
+                background: black;
+                &--first {
+                    transform: rotate(-45deg) translate(-1px,10px);
+                }
+
+                &--second {
+                    opacity: 0;
+                }
+
+                &--third {
+                    transform: rotate(45deg) translate(-1px,-10px);
+                }
+            }
+        }
+
         &-container-unexpanded {
             left: 0;
         }
 
         &-container-expanded {
             left: -66%;
+            .hamburger__close{
+                position: fixed;
+                display: block;
+                width: 100vw;
+                height: 100vh;
+                z-index: 1;
+                background: rgba(4,4,4, 0.8);
+                left: 0;
+                top: 0;
+            }
         }
 
         &-list-unexpanded {
@@ -123,6 +154,7 @@
             &-container-expanded {
                 left: $left;
             }
+
             &-list-unexpanded {
                 right: $right;
             }

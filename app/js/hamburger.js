@@ -17,6 +17,7 @@ let hamburger = {
         this.cont.classList.toggle("hamburger-container-unexpanded");
         this.nav.classList.toggle("hamburger-list-expanded");
         this.nav.classList.toggle("hamburger-list-unexpanded");
+        this.el[0].classList.toggle("hamburger-barAnimation");
     }
 }
     hamburger.el[0].addEventListener("click", () => {

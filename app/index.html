@@ -6,9 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
-    <meta name="description" content="jeżeli chcesz zacząć programować to właśnie ta strona jest idealna dla Ciebie">
+    <meta name="description" content="C0deyourfuture.pl jest stroną która naprowadzi Cię na twoim starcie programowania">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#05668D">
+    <meta name="msapplication-navbutton-color" content="#303030">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#303030">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="C0deyourfuture">
+    <meta property="og:description" content="C0deyourfuture.pl jest stroną która naprowadzi Cię na twoim starcie programowania">
+    <meta property="og:site_name" content="PoznajProgramowanie.pl">
 
     <!-- build:css css/bootstrap.min.css -->
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -21,32 +28,34 @@
 
 <body class="bg-light">
     <div class="container hamburger-container-unexpanded">
+            <div class="hamburger__close "></div>
         <header class="header row  ">
             <div class="col"><a href="index.html">
-                    <img class="header__logo" src="images/logo.png" alt="logo"></a><span class="text-secondary ">ode
+                    <img class="header__logo" src="images/logo.png" alt="logo"></a><span class="text-white header__heading ">ode
                     your future</span></div>
-            <div class="hamburger align-self-center  col-2">
-                <div class="hamburger__bar"></div>
-                <div class="hamburger__bar "></div>
-                <div class="hamburger__bar"></div>
+            <div class="hamburger  align-self-center  col-2">
+                <div class="hamburger__bar hamburger__bar--first"></div>
+                <div class="hamburger__bar hamburger__bar--second"></div>
+                <div class="hamburger__bar hamburger__bar--third"></div>
                 
             </div>
-            <nav id="header-list" class="  header__cont-list hamburger-list-unexpanded col-8 col-sm-4 col-md-3 col-lg-8  bg-light  align-self-center  ">
+            <nav id="header-list" class="  header__cont-list hamburger-list-unexpanded col-8 col-sm-4 col-md-3 col-lg-8 text-light align-self-center  ">
+                
                 <ul class="header__list row  list-unstyled justify-content-end">
-                    <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="text-black-50"
+                    <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="header__link text-white"
                             href="#">Co to programowanie?</a></li>
-                    <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="text-black-50"
+                    <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="header__link text-white"
                             href="#">Zalety programowania?</a></li>
-                    <li class="header__list-item col-12 col-lg-3 align-self-center  text-center"><a class="text-black-50"
+                    <li class="header__list-item col-12 col-lg-3 align-self-center  text-center"><a class="header__link text-white"
                             href="#">Jak zacząć?</a></li>
                 </ul>
             </nav>
         </header>
         <div class="slider justify-content-center row ">
 
-            <video loop preload="auto" autoplay rel=”noopener noreferrer” class="slider__video" >
-                <source src="images/logo.mp4" type="video/mp4">
+            <video loop preload="auto" autoplay muted rel=”noopener noreferrer” class="slider__video" >
                 <source src="images/logo.webm" type="video/webm">
+                <source src="images/logo.mp4" type="video/mp4">
 
                 <img class="slider__img img-fluid " src="images/slider.jpg" alt="slider image" />
             </video>
@@ -57,11 +66,11 @@
         <main>
             <section class="row  justify-content-center">
                 <h2 class="card__heading  text-center py-4 col-12 mb-0">Czym jest programowanie?</h2>
-                <article class="card col-11 p-0  mb-2 col-sm col-lg-3 invisible">
+                <article class="card col-11 mr-xl-2 p-0  mb-2 col-sm col-lg-3 invisible">
                     <img class="card-img" data-src="images/section1.1.jpeg"><!-- image comes from 'https://cdn-images-1.medium.com/max/1600/1*8VCHzkq2iC4i_fnYvFWgig.jpeg'-->
                     <div class="card-body">
                         <h5 class="card__heading card-title text-center">Logicznym myśleniem</h5>
-                        <p class="card-text text-secondary text-center">
+                        <p class=" card-text text-secondary text-center">
                             W programowaniu myślenie polego na rozłożeniu wszystkiego na czynniki pierwsze, podobnie
                             jak składając klocki, z małych części składamy coś większego.</p>
                     </div>
