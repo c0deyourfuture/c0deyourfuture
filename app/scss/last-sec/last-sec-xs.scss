@@ -18,7 +18,16 @@
         }
         
     }
-
+    &__link{
+        &:hover{
+            .last-sec__header,
+            .last-sec__caption{
+                color: transparent !important;
+                border-top: none;
+                transition: 0.4s all;
+            }
+        }
+    }
     &__cont {
         height: 100%;
 

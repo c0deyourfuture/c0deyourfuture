@@ -128,9 +128,13 @@
                 width: 100vw;
                 height: 100vh;
                 z-index: 1;
+                transition: 1s all;
                 background: rgba(4,4,4, 0.8);
                 left: 0;
                 top: 0;
+            }
+            .header__cont-list{
+                background: white;
             }
         }
 

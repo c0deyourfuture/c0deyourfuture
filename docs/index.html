@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
+<!-- wesite created by Dominik Obuch. https://github.com/DominikObuch-->
 
 <head>
-    <title>C0deYourFuture</title>
+    <title>C0deYourFuture to strona która poprowadzi Cię na początku twojej ścieżki programisty.</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
-    <meta name="description" content="C0deyourfuture.pl jest stroną która naprowadzi Cię na twoim starcie programowania">
+    <meta name="description" content="C0deyourfuture.pl jest stroną która naprowadzi Cię na twoim starcie programowania i pokaże Ci jakie są zalety programowania oraz jak zacząć">
+    <meta name="keywords" content="programowanie, jak zacząć, programista, zarobki, strony internetowe, praca, oprogramowanie, podstawy, c++, java, javascript, html, css, źródła wiedzy, zawód przyszłości, pisanie kodu, informatyka, IT, kurs, informatyk, koder">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#05668D">
     <meta name="msapplication-navbutton-color" content="#303030">
@@ -16,7 +18,16 @@
     <meta property="og:title" content="C0deyourfuture">
     <meta property="og:description" content="C0deyourfuture.pl jest stroną która naprowadzi Cię na twoim starcie programowania">
     <meta property="og:site_name" content="PoznajProgramowanie.pl">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="C0deYourFuture" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png" />
 
+    <meta name="msapplication-TileColor" content="#303030">
+    <meta name="msapplication-TileImage" content="images/icon/ms-icon-144x144.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -24,19 +35,25 @@
 
 <body class="bg-light">
     <div class="container hamburger-container-unexpanded">
-            <div class="hamburger__close "></div>
+        <div class="hamburger__close "></div>
         <header class="header row  ">
-            <div class="col"><a href="index.html">
-                    <img class="header__logo" src="images/logo.png" alt="logo"></a><span class="text-white header__heading ">ode
-                    your future</span></div>
+            <div class="col">
+                <a href="index.html">
+                    <h1 class="header__cont-heading">
+                        <img class="header__logo" src="images/logo.png" alt="logo">
+                </a><span class="text-white header__heading ">ode
+                    your future</span>
+                </h1>
+
+            </div>
             <div class="hamburger  align-self-center  col-2">
                 <div class="hamburger__bar hamburger__bar--first"></div>
                 <div class="hamburger__bar hamburger__bar--second"></div>
                 <div class="hamburger__bar hamburger__bar--third"></div>
-                
+
             </div>
             <nav id="header-list" class="  header__cont-list hamburger-list-unexpanded col-8 col-sm-4 col-md-3 col-lg-8 text-light align-self-center  ">
-                
+
                 <ul class="header__list row  list-unstyled justify-content-end">
                     <li class="header__list-item col-12 col-lg-4 align-self-center  text-center"><a class="header__link text-white"
                             href="#">Co to programowanie?</a></li>
@@ -49,11 +66,9 @@
         </header>
         <div class="slider justify-content-center row ">
 
-            <video loop preload="auto" autoplay muted rel=”noopener noreferrer” class="slider__video" >
+            <video loop preload="auto" autoplay muted rel=”noopener ” class="slider__video">
                 <source src="images/logo.webm" type="video/webm">
                 <source src="images/logo.mp4" type="video/mp4">
-
-                <img class="slider__img img-fluid " src="images/slider.jpg" alt="slider image" />
             </video>
             <div class="position-absolute  align-self-center text-center text-white ">
                 <h5 class="slider__heading">Jakie są zalety programowania i dlaczego i Ty powinieneś to umieć?</h5>
@@ -63,7 +78,7 @@
             <section class="row  justify-content-center">
                 <h2 class="card__heading  text-center py-4 col-12 mb-0">Czym jest programowanie?</h2>
                 <article class="card col-11 mr-xl-2 p-0  mb-2 col-sm col-lg-3 invisible">
-                    <img class="card-img" data-src="images/section1.1.jpeg"><!-- image comes from 'https://cdn-images-1.medium.com/max/1600/1*8VCHzkq2iC4i_fnYvFWgig.jpeg'-->
+                    <img class="card-img" data-src="images/section1.1.jpeg" alt="zdjęcie mózgu"><!-- image comes from 'https://cdn-images-1.medium.com/max/1600/1*8VCHzkq2iC4i_fnYvFWgig.jpeg'-->
                     <div class="card-body">
                         <h5 class="card__heading card-title text-center">Logicznym myśleniem</h5>
                         <p class=" card-text text-secondary text-center">
@@ -73,7 +88,7 @@
 
                 </article>
                 <article class="card col-11 p-0 mb-2 col-sm col-lg-3 invisible">
-                    <img class="card-img " data-src="images/section1.2.jpg"><!-- image comes from 'http://partnersinexcellenceblog.com/wp-content/uploads/2012/08/HiRes.jpg'-->
+                    <img class="card-img " data-src="images/section1.2.jpg" alt="układanie puzzli"><!-- image comes from 'http://partnersinexcellenceblog.com/wp-content/uploads/2012/08/HiRes.jpg'-->
                     <div class="card-body">
                         <h5 class="card__heading card-title text-center">Rozwiązywaniem problemów</h5>
                         <p class="card-text text-secondary text-center">
@@ -83,7 +98,7 @@
 
                 </article>
                 <article class="card col-11 p-0 mb-2 col-sm col-lg-3 invisible ">
-                    <img class="card-img" data-src="images/section1.3.jpg"><!-- image comes from 'https://pixabay.com/en/baking-cake-baking-soda-2589517/'-->
+                    <img class="card-img" data-src="images/section1.3.jpg" alt="robienie ciasta"><!-- image comes from 'https://pixabay.com/en/baking-cake-baking-soda-2589517/'-->
                     <div class="card-body">
                         <h5 class="card__heading card-title text-center">Jest jak pieczenie ciasta</h5>
                         <p class="card-text text-secondary  text-center">
@@ -95,9 +110,9 @@
 
             </section>
             <section class=" card__background row justify-content-center">
-                <h2 class="card__heading text-center py-4 col-12">Czym jest programowanie?</h2>
+                <h2 class="card__heading text-center py-4 col-12">Czego uczy programowanie?</h2>
                 <article class="second-section card col-10 p-0 mb-2 bg-transparent col-sm-4 position-relative col-lg-3  border-0 invisible">
-                    <div class="card__circle text-center  rounded-circle bg-white"><img class="card__icon h-100 card-img "
+                    <div class="card__circle text-center  rounded-circle bg-white"><img class="card__icon h-100 card-img " alt="kreatywność"
                             data-src="images/section2.1.svg"></div><!-- image comes from 'https://cdn-images-1.medium.com/max/1600/1*8VCHzkq2iC4i_fnYvFWgig.jpeg'-->
                     <div class="card-body">
                         <p class="card-text text-white text-center">
@@ -109,7 +124,7 @@
 
                 </article>
                 <article class="second-section card col-10 p-0  mb-2 position-relative bg-transparent col-sm-4 col-lg-3 border-0 invisible">
-                    <div class="card__circle text-center  rounded-circle bg-white"><img class="card__icon h-100 card-img "
+                    <div class="card__circle text-center  rounded-circle bg-white"><img class="card__icon h-100 card-img " alt="komunikacja"
                             data-src="images/section2.2.svg"></div><!-- image comes from 'http://partnersinexcellenceblog.com/wp-content/uploads/2012/08/HiRes.jpg'-->
                     <div class="card-body">
                         <p class="card-text text-white text-center">
@@ -123,7 +138,7 @@
 
                 </article>
                 <article class="second-section card col-10 p-0 mb-2 position-relative bg-transparent col-sm-4 col-lg-3  border-0 invisible">
-                    <div class="card__circle text-center  rounded-circle bg-white"><img class="card__icon  h-100 card-img"
+                    <div class="card__circle text-center  rounded-circle bg-white"><img class="card__icon  h-100 card-img" alt="przychód"
                             data-src="images/section2.3.svg"></div><!-- image comes from 'https://pixabay.com/en/baking-cake-baking-soda-2589517/'-->
                     <div class="card-body">
                         <p class="card-text text-white text-center">
@@ -140,8 +155,8 @@
             <section class="row justify-content-center">
                 <article class="invisible p-0 last-sec__article  last-sec__article--left col-12 col-12 col-sm-6 col-lg-5 col-md-6  col-md-6 ">
                     <div class="last-sec__cont last-sec__cont--light-blue align-items-center ">
-                        <a target="_blank" rel=”noopener noreferrer” href="http://pasja-informatyki.pl/"><img class="last-sec__image h-100"
-                                data-src="images/section3/section3.1.jpg">
+                        <a class="last-sec__link" target="_blank" rel=”noopener ” href="http://pasja-informatyki.pl/"><img 
+                                class="last-sec__image h-100" data-src="images/section3/section3.1.jpg" alt="logo Pasji informatyki">
                             <h5 class="last-sec__header text-white font-weight-bold ">Pasja informatyki</h5>
                             <span class="last-sec__caption  text-white mx-4"> adipisicing elit. Ab magnam, dicta
                                 dolorem ducimus deleniti, ut molestias quae, </span>
@@ -152,63 +167,69 @@
                 </article>
                 <article class="invisible p-0 last-sec__article last-sec__article--right col-12 col-12 col-sm-6 col-lg-7 col-md-6  col-md-6 ">
                     <div class="last-sec__cont last-sec__cont--violet align-items-center  ">
-                        <a target="_blank" rel=”noopener noreferrer” href="https://www.sololearn.com/"><img class="last-sec__image h-100"
-                                data-src="images/section3/section3.2.png">
-                            <h5 class="last-sec__header text-white font-weight-bold">Solo learn</h5>
-                            <span class="last-sec__caption  text-white mx-4"> strona z wysoko jakościowpymi
-                                materiałami do nauki z różnych żeczy
-                                tekże po polsku .</span>
+                        <a class="last-sec__link" target="_blank" rel=”noopener ” href="https://www.sololearn.com/"><img
+                                class="last-sec__image h-100" data-src="images/section3/section3.2.png" alt="logo SoloLearn">
+                            <h5 class="last-sec__header text-white font-weight-bold">SoloLearn</h5>
+                            <span class="last-sec__caption  text-white mx-4"> Najpopularniejsza aplikacja mobilna
+                                oferująca darmowe kursy polegające na </span>
                         </a>
 
                     </div>
                 </article>
                 <article class="invisible p-0 last-sec__article  last-sec__article--left col-12 col-12 col-sm-6 col-lg-7 col-md-6  col-md-6 ">
                     <div class="last-sec__cont last-sec__cont--red d-flex ">
-                        <a class="d-flex" rel=”noopener noreferrer” target="_blank" href="https://www.udemy.com/"><img class="last-sec__image  last-sec__image--udemy  "
-                                data-src="images/section3/section3.3.png">
+                        <a class="d-flex last-sec__link" rel=”noopener ” target="_blank" href="https://www.udemy.com/"><img
+                                class="last-sec__image  last-sec__image--udemy  " data-src="images/section3/section3.3.png" alt="logo Udemy">
                             <h5 class="last-sec__header text-white font-weight-bold">Udemy</h5>
-                            <span class="last-sec__caption  text-white mx-4"> Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Vel accusantium, ducimus recusandae iusto quibusdam quasi, accusamus,
-                                sed eveniet odit quae nostrum </span>
+                            <span class="last-sec__caption  text-white mx-4"> Udemy to miejsce w którym możemy
+                                nauczyć się programować poprzez tutoriale oferowane przez innych.</span>
                         </a>
                     </div>
                 </article>
                 <article class="invisible p-0 last-sec__article third__section--right col-12 col-12 col-sm-6 col-lg-5 col-md-6  col-md-6 ">
                     <div class="last-sec__cont last-sec__cont--yellow d-flex">
-                        <a class="d-flex" rel=”noopener noreferrer” target="_blank" href="https://stackoverflow.com/"><img class="last-sec__image w-100  "
-                                data-src="images/section3/section3.4.png">
-                            <h5 class="last-sec__header text-white font-weight-bold">stackoverflow</h5>
-                            <span class="last-sec__caption  text-white mx-4"> adipisicing elit. Ab magnam, dicta
-                                dolorem ducimus deleniti, ut molestias quae, </span>
+                        <a class="d-flex last-sec__link" rel=”noopener” target="_blank" href="https://stackoverflow.com/"><img
+                                class="last-sec__image w-100  " data-src="images/section3/section3.4.png" alt="logo StackOverflow">
+                            <h5 class="last-sec__header text-white font-weight-bold">StackOverflow</h5>
+                            <span class="last-sec__caption  text-white mx-4">StackOverflow to serwis społecznościowy
+                                zrzeszający programistów z całego świata pomagając sobie nawzajem. </span>
                         </a>
                     </div>
                 </article>
                 <article class="invisible p-0 last-sec__article third__section--left col-12 col-12 col-sm-6 col-lg-5 col-md-6  col-md-6 ">
                     <div class="last-sec__cont last-sec__cont--blue d-flex">
-                        <a class="d-flex" rel=”noopener noreferrer” target="_blank" href="https://www.khanacademy.org/"><img class="last-sec__image w-100  "
-                                data-src="images/section3/section3.5.png">
-                            <h5 class="last-sec__header text-white font-weight-bold">Khan akademy</h5>
-                            <span class="last-sec__caption  text-white mx-4"> strona z wysoko jakościowpymi
-                                materiałami do nauki z różnych żeczy</span>
+                        <a class="d-flex last-sec__link" rel=”noopener” target="_blank" href="https://www.khanacademy.org/"><img
+                                class="last-sec__image w-100  " data-src="images/section3/section3.5.png" alt="logo Khan Akademy">
+                            <h5 class="last-sec__header text-white font-weight-bold">Khan Akademy</h5>
+                            <span class="last-sec__caption  text-white mx-4"> Strona z wysoko jakościowymi materiałami
+                                z taki dziecin jak matemtayka, fizyka czy też oczywiście programowania
+                            </span>
                         </a>
                     </div>
                 </article>
                 <article class="invisible p-0 last-sec__article  last-sec__article--right col-12 col-12 col-sm-6 col-lg-7 col-md-6  col-md-6">
                     <div class="last-sec__cont last-sec__cont--green d-flex">
-                        <a class="d-flex" rel=”noopener noreferrer” target="_blank" href="https://www.hackerrank.com/"><img class="last-sec__image w-100  "
-                                data-src="images/section3/section3.6.png">
-                            <h5 class="last-sec__header text-white font-weight-bold">Hakerrank</h5>
-                            <span class="last-sec__caption  text-white mx-4">hackerrank skupia sie na programowaniu
+                        <a class="d-flex last-sec__link" rel=”noopener” target="_blank" href="https://www.hackerrank.com/"><img
+                                class="last-sec__image w-100  " data-src="images/section3/section3.6.png" alt="logo HakerRank">
+                            <h5 class="last-sec__header text-white font-weight-bold">HakerRank</h5>
+                            <span class="last-sec__caption  text-white mx-4">HackerRank skupia sie na programowaniu
                                 konkurencyjnym gdzie programiści
-                                staraja się jak najlepier rozwiązać dany problem</span>
+                                staraja się jak najlepier rozwiązać dany problem.</span>
                         </a>
                     </div>
                 </article>
             </section>
 
         </main>
-        <footer class="row">
-siema
+        <footer class="row justify-content-center p-2">
+            <div class="col-10 col-lg text-center ">Icons made by <a href="https://www.flaticon.com/authors/eucalyp"
+                    title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+                    target="_blank">CC 3.0 BY</a></div>
+            <div><span>Znajdź nas także na:</span>
+                <ion-icon class="footer__icon" name="logo-facebook" src="images/_ionicons_svg_logo-facebook.svg"></ion-icon>
+                <ion-icon class="footer__icon" name="logo-instagram" src="images/_ionicons_svg_logo-instagram.svg"></ion-icon>
+
         </footer>
 
     </div>
@@ -216,7 +237,7 @@ siema
 
 
 
-
+    <script src="js/ionicons.js"></script>
 
     <script src="js/jquery.min.js"></script>
 
@@ -225,6 +246,9 @@ siema
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/index.min.js"></script>
+
+
+
 </body>
 
 </html>

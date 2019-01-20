@@ -10,6 +10,13 @@
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     width: 0px; }
+    .hamburger__close {
+      -webkit-transition: 1s all;
+      transition: 1s all;
+      position: fixed;
+      background: transparent;
+      width: 100vw;
+      height: 100vh; }
     .hamburger__bar {
       cursor: pointer;
       right: 2rem;
@@ -32,6 +39,8 @@
     width: 100%;
     -webkit-transition: 1s all;
     transition: 1s all; }
+    .header__cont-heading {
+      font-size: 1.5rem; }
     .header__scrolled {
       background: rgba(247, 248, 248, 0.8);
       -webkit-transition: 1s all;
@@ -43,11 +52,19 @@
       .header__scrolled .hamburger__bar {
         background: black; }
       .header__scrolled .header__cont-list {
-        background: transparent !important;
         -webkit-transition: 1s all;
         transition: 1s all; }
+      .header__scrolled .header__logo {
+        -webkit-filter: none;
+        filter: none; }
     .header__logo {
-      height: 3rem; }
+      height: 3rem;
+      -webkit-filter: invert(1);
+      filter: invert(1);
+      -webkit-transition: 1s -webkit-filter;
+      transition: 1s -webkit-filter;
+      transition: 1s filter;
+      transition: 1s filter, 1s -webkit-filter; }
     .header__link {
       color: #343a40 !important; }
     .header__cont-list {
@@ -99,9 +116,13 @@
       width: 100vw;
       height: 100vh;
       z-index: 1;
+      -webkit-transition: 1s all;
+      transition: 1s all;
       background: rgba(4, 4, 4, 0.8);
       left: 0;
       top: 0; }
+    .hamburger-container-expanded .header__cont-list {
+      background: white; }
   .hamburger-list-unexpanded {
     right: -68%;
     overflow: auto;
@@ -293,6 +314,13 @@
   .last-sec__image--udemy {
     width: 100%; }
 
+.last-sec__link:hover .last-sec__header,
+.last-sec__link:hover .last-sec__caption {
+  color: transparent !important;
+  border-top: none;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all; }
+
 .last-sec__cont {
   height: 100%; }
   .last-sec__cont--light-blue {
@@ -428,3 +456,14 @@
   to {
     position: relative;
     right: 0; } }
+
+.footer {
+  text-align: center; }
+  .footer span {
+    padding-bottom: 1rem; }
+  .footer__icon {
+    width: 1.5rem;
+    padding-top: 1rem;
+    height: 1.5rem;
+    color: #909090;
+    text-align: center; }

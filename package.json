@@ -28,6 +28,7 @@
     "gulp-uglify": "^3.0.1",
     "gulp-useref": "^3.1.6",
     "gulp-util": "^3.0.8",
+    "ionicons": "^4.5.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
     "run-sequence": "^2.2.1"

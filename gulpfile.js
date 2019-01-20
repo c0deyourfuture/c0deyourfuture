@@ -66,9 +66,11 @@ gulp.task('useref', () => {
 });
 
 gulp.task("moveframeworks", function () {
-  gulp.src("node_modules/bootstrap/docs/js/bootstrap.min.js")
-  gulp.src("node_modules/jquery/docs/jquery.min.js")
-  gulp.src("node_modules/popper.js/docs/popper.min.js")
+
+  gulp.src("/node_modules/bootstrap/docs/js/bootstrap.min.js")
+  gulp.src("/node_modules/ionicons/dist/ionicons.js")
+  gulp.src("/node_modules/jquery/dist/jquery.min.js")
+  gulp.src("/node_modules/popper.js/docs/popper.min.js")
     .pipe(gulp.dest("app/js"))
   gulp.src("node_modules/bootstrap/docs/css/bootstrap.min.css")
     .pipe(gulp.dest("app/css"))
